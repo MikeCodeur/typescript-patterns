@@ -1,13 +1,13 @@
 {
-  "name": "@mikecodeur/react-module-template",
-  "title": "React Module Template",
-  "description": "Module template pour la création future de module de formation",
+  "name": "@mikecodeur/typescript-patterns",
+  "title": "TypeScript design patterns",
+  "description": "Module de la formation TypeScript PRO",
   "author": "Mike Codeur <contact@mikecodeur.com> (https://mikecodeur.com/)",
   "course": "typescript",
   "version": "1.0.0",
   "private": true,
   "keywords": [],
-  "homepage": "https://react-module-template.mikecodeur.com",
+  "homepage": "https://typescript-patterns.mikecodeur.com",
   "license": "GPL-3.0-only",
   "main": "src/index.js",
   "engines": {
@@ -77,10 +77,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikecodeur/react-module-template.git"
+    "url": "git+https://github.com/mikecodeur/typescript-patterns.git"
   },
   "bugs": {
-    "url": "https://github.com/mikecodeur/react-module-template/issues"
+    "url": "https://github.com/mikecodeur/typescript-patterns/issues"
   },
   "msw": {
     "workerDirectory": "public"
