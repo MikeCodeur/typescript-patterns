@@ -6,6 +6,25 @@
 import displayText, {init} from './helper/exerciseHelper'
 init()
 
+class Feature1 {
+  public operation1(): string {
+    return 'feature1: Ready!\n'
+  }
+  public operationN(): string {
+    return 'feature&: start!\n'
+  }
+}
+
+class Feature2 {
+  public operation1(): string {
+    return 'Feature 2: Go!\n'
+  }
+
+  public operationZ(): string {
+    return 'Feature 2: ok!'
+  }
+}
+
 class Facade {
   private feature1: Feature1
   private feature2: Feature2
@@ -23,25 +42,6 @@ class Facade {
     result += this.feature2.operationZ()
 
     return result
-  }
-}
-
-class Feature1 {
-  public operation1(): string {
-    return 'feature1: Ready!\n'
-  }
-  public operationN(): string {
-    return 'feature&: start!\n'
-  }
-}
-
-class Feature2 {
-  public operation1(): string {
-    return 'Feature 2: Go!\n'
-  }
-
-  public operationZ(): string {
-    return 'Feature 2: ok!'
   }
 }
 
