@@ -37,13 +37,13 @@ class DataBaseConnexion {
     console.log(`execute on ${this.protocol} ${this.hostname} ${this.port}`)
   }
 }
-// 🐶 modifie les 3 instanciation
+// 🐶 modifie les 3 instanciations
 const con = new DataBaseConnexion('localhost', '3301', 'mysql')
 con.execute()
 const con2 = new DataBaseConnexion('localhost', '3301', 'mysql')
 con2.execute()
 const con3 = new DataBaseConnexion('localhost', '3301', 'mysql')
-con2.execute()
+con3.execute()
 /*
 eslint
   @typescript-eslint/no-unused-vars: "off"

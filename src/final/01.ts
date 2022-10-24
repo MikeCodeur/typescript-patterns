@@ -45,4 +45,7 @@ const con2 = DataBaseConnexion.getInstance()
 con2.execute()
 
 const con3 = DataBaseConnexion.getInstance()
-con2.execute()
+con3.execute()
+/*eslint
+  @typescript-eslint/no-useless-constructor: "off"
+*/
