@@ -8,7 +8,7 @@ init()
 
 // ✔️ Début de l'exercice
 
-// 🐶 Modifie 'DataBaseConnexion' pour qu'il devienne unb Singleton
+// 🐶 Modifie 'DataBaseConnexion' pour qu'il devienne un Singleton
 class DataBaseConnexion {
   // 🐶 créé un champs 'instance' privé et static de type 'DataBaseConnexion'
   // 🐶 déclare ici en privé 'hostname' 'port' 'protocol' et supprime les du constructeur
