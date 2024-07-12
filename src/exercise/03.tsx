@@ -1,11 +1,14 @@
-// Les Types de bases
-// http://localhost:3000/alone/final/01.ts
+"use client"
+// Les opérateurs
+// http://localhost:3000/alone/exercise/01.ts
 
 // ❌ NE PAS MODIFIER
 // Utilitaire ne faisant pas partie de l'exercice
-import displayText, {init} from './helper/exerciseHelper'
+import displayText, { App, init } from "../lib/exerciseHelper"; 
+const exercice = () => {
 init()
 
+// ✔️ Début de l'exercice
 interface Employee {
   salaryRate: number
 }
@@ -41,6 +44,7 @@ class Cooker implements Employee {
   constructor() {}
 }
 
+// gestion des freelances (quasi identique à employee)
 interface Freelance {
   tjm: number
 }
@@ -86,39 +90,26 @@ class EmployeeFactory {
     }
   }
 }
+// 🐶 Créé l'interface 'AbstractFactory' qui contiendra
+// - createEmployee(): Employee
+// - createFreelance(): Freelance
+// - factoryName
 
-interface AbstractFactory {
-  createEmployee(): Employee
-  createFreelance(): Freelance
-  factoryName: string
-}
-class ConcreteFactoryDev implements AbstractFactory {
+// 🐶 implemente l'interface 'AbstractFactory'
+class ConcreteFactoryDev {
   factoryName = 'Factory Developpeur'
-  public createEmployee(): Employee {
-    const f = new EmployeeFactory()
-    return f.getEmployee(EmployeeType.DEV)
-  }
-
-  public createFreelance(): Freelance {
-    const f = new FreelanceFactory()
-    return f.getFreelance(FreelanceType.DEV)
-  }
+  // 🐶 implemente 'createEmployee' grace à 'EmployeeFactory' et EmployeeType.DEV
+  // 🐶 implemente 'createFreelance' grace à 'FreelanceFactory' et FreelanceType.DEV
 }
-
-class ConcreteFactoryProject implements AbstractFactory {
+// 🐶 implemente l'interface 'AbstractFactory'
+class ConcreteFactoryProject {
   factoryName = 'Factory Project'
-  public createEmployee(): Employee {
-    const f = new EmployeeFactory()
-    return f.getEmployee(EmployeeType.PROJECT)
-  }
-
-  public createFreelance(): Freelance {
-    const f = new FreelanceFactory()
-    return f.getFreelance(FreelanceType.PROJECT)
-  }
+  // 🐶 implemente 'createEmployee' grace à 'EmployeeFactory' et EmployeeType.PROJECT
+  // 🐶 implemente 'createFreelance' grace à 'FreelanceFactory' et FreelanceType.PROJECT
 }
 
-function clientCode(factory: AbstractFactory) {
+// 🐶 change any par AbstractFactory
+function clientCode(factory: any) {
   const employee = factory.createEmployee()
   const freelance = factory.createFreelance()
 
@@ -126,8 +117,8 @@ function clientCode(factory: AbstractFactory) {
   displayText(`${factory.factoryName} : freelance tjm : ${freelance.tjm}`)
 }
 
-clientCode(new ConcreteFactoryDev())
-clientCode(new ConcreteFactoryProject())
+// 🐶 appelle 'clientCode' avec 'ConcreteFactoryDev'
+// 🐶 appelle 'clientCode' avec 'ConcreteFactoryProject'
 
 /*
 eslint
@@ -137,3 +128,5 @@ eslint
 eslint
   @typescript-eslint/no-useless-constructor: "off"
 */
+};
+export default () => <App exercice={exercice} />;

@@ -1,9 +1,11 @@
+"use client"
 // Les opérateurs
 // http://localhost:3000/alone/exercise/01.ts
 
 // ❌ NE PAS MODIFIER
 // Utilitaire ne faisant pas partie de l'exercice
-import displayText, {init} from './helper/exerciseHelper'
+import displayText, { App, init } from "../lib/exerciseHelper"; 
+const exercice = () => {
 init()
 
 // ✔️ Début de l'exercice
@@ -44,3 +46,5 @@ console.log('execution avec un proxy')
 eslint
   @typescript-eslint/no-unused-vars: "off"
 */
+};
+export default () => <App exercice={exercice} />;
